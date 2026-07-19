@@ -4,19 +4,6 @@ A Laravel client package for the **Esanj Discount Microservice** (coupons & gift
 
 ## Installation
 
-The package lives in this monorepo and is wired up as a path repository. Add it to the root `composer.json`:
-
-```jsonc
-"require": {
-    "esanj/discount-client": "dev-main"
-},
-"repositories": [
-    { "type": "path", "url": "packages/esanj/ms-package-discount", "options": { "symlink": true } }
-]
-```
-
-Then:
-
 ```bash
 composer update esanj/discount-client
 ```

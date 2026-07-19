@@ -74,16 +74,6 @@ non-expired token.
 
 ## 3. Installation
 
-In the root `composer.json`:
-
-```jsonc
-"require": {
-    "esanj/discount-client": "dev-main"
-},
-"repositories": [
-    { "type": "path", "url": "packages/esanj/ms-package-discount", "options": { "symlink": true } }
-]
-```
 
 ```bash
 composer update esanj/discount-client
