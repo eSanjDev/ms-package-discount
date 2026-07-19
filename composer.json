@@ -1,0 +1,48 @@
+{
+    "name": "esanj/discount-client",
+    "description": "Laravel client package for the Esanj Discount Microservice (coupons & gift cards)",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Esanj",
+            "email": "esanjdev@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2|^8.3|^8.4",
+        "ext-json": "*",
+        "esanj/auth-bridge": "^0.1.8 || dev-main",
+        "illuminate/support": "^12.0|^13.0",
+        "illuminate/log": "^12.0|^13.0",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0|^10.0",
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Esanj\\DiscountClient\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Esanj\\DiscountClient\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Esanj\\DiscountClient\\DiscountClientServiceProvider"
+            ],
+            "aliases": {
+                "Discount": "Esanj\\DiscountClient\\Facades\\Discount",
+                "Coupon": "Esanj\\DiscountClient\\Facades\\Coupon",
+                "GiftCard": "Esanj\\DiscountClient\\Facades\\GiftCard"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
