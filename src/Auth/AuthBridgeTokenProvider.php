@@ -42,7 +42,7 @@ class AuthBridgeTokenProvider implements TokenProviderInterface
     public function invalidate(): void
     {
         if ($this->clientId !== '') {
-            $this->credentials->invalidateToken($this->clientId, $this->scope);
+            $this->credentials->invalidateToken($this->clientId, $this->clientSecret, $this->scope);
         }
     }
 
